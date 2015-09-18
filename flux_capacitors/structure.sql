@@ -1,4 +1,4 @@
 CREATE Database menagerie;
-CREATE Table pet (name (VARCHAR(20)), species(VARCHAR(20)), sex CHAR(1), birth DATE, death DATE, petID int NOT NULL AUTO_INCREMENT);
-CREATE Table owner (ownername(VARCHAR(20)), ownID int NOT NULL AUTO_INCREMENT);
-CREATE Table link (petID int, OwnerID int);
+CREATE Table pet (name VARCHAR(20), species VARCHAR(20), sex CHAR(1), birth DATE, death DATE, ownID int, specID int, petID int NOT NULL AUTO_INCREMENT, PRIMARY KEY(petID));
+CREATE Table owner (ownername VARCHAR(20), ownID int NOT NULL AUTO_INCREMENT, PRIMARY KEY (ownID));
+CREATE Table species (species VARCHAR(20), specID int NOT NULL AUTO_INCREMENT, PRIMARY KEY (specID));
