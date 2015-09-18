@@ -6,4 +6,5 @@ create table Pet (PetID int primary key, OwnerID int, SpeciesID int, Petname var
 create table Owner (OwnerID int primary key, OwnerName varchar(20)); 
 create table Species (SpeciesID int primary key, SpeciesName varchar(20)); 
 
-
+alter table Pet add constraint fkownerlink foreign key (OwnerID) references Owner (OwnerID);
+alter table Pet add constraint fkspecieslink foreign key (speciesID) references Species (SpeciesID);
