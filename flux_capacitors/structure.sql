@@ -6,10 +6,10 @@ CREATE Table species (species VARCHAR(20), specID int NOT NULL AUTO_INCREMENT, P
 
 Alter table pet
 ADD CONSTRAINT ownerconstraint 
-FOREIGN KEY ownid 
-REFERENCES owner(ownid); 
+FOREIGN KEY (ownID) 
+REFERENCES owner(ownID); 
 
 Alter table pet
 ADD CONSTRAINT speciesconstraint 
-FOREIGN KEY specid 
-REFERENCES species(specid);
+FOREIGN KEY (specID)
+REFERENCES species(specID);
