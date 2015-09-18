@@ -1,4 +1,4 @@
-insert into pet (name, sex, birth, death) values ('Fluffy', 'f', '1993-02-04', null);
+insert into pet (name, sex, birth, death, ownid, specid) values ('Fluffy', 'f', '1993-02-04', null);
 insert into pet (name, sex, birth, death) values ('Claws',  'm', '1994-03-17', null);
 insert into pet (name, sex, birth, death) values ('Buffy', 'f', '1989-05-13', null);
 insert into pet (name, sex, birth, death) values ('Fang', 'm', '1990-08-27', null);
