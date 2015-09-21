@@ -1,0 +1,6 @@
+1. SELECT petname, MAX(Price)  FROM petname;
+2. SELECT petname, Price FROM petname ORDER BY Price DESC LIMIT 3;
+3. SELECT petname, Price FROM petname ORDER BY Price limit 3;
+4. SELECT DISTINCT petname FROM petname;
+
+
