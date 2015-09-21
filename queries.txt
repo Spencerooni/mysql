@@ -10,13 +10,13 @@ create queries for
 5. unique pet names, but ignore different capitalisations (fLuFfY should match fluffy)
 6. retrieve name, price of pets without an owner
 7. select pets who are still for sale (the criteria is that they have no owner and have been neutered)
-8. owner name and the number of pets owned by that owner (see “count” function in mysql)
-9. select the total value of all pets
-10. retrieve the different pet names and how many times that pet name was given
-11. names of people who don’t own a pet
-12. pets which cost > 9.99 but < 19.99, displayed by highest amount first
-13. select names of pets whose owner name is “John Smith”
-14. select names of owners whose name begins with “John”
-15. select names of owners whose name ends in “Smith” or “Smyth”
-16. select names of owners who has “av” somewhere in their name (“david” and “dave” should both match)
-
+8. selects pets who have an owner and are not neutered
+9. owner name and the number of pets owned by that owner (see “count” function in mysql)
+10. select the total value of all pets
+11. retrieve the different pet names and how many times that pet name was given
+12. names of people who don’t own a pet
+13. pets which cost > 9.99 but < 19.99, displayed by highest amount first
+14. select names of pets whose owner name is “John Smith”
+15. select names of owners whose name begins with “John”
+16. select names of owners whose name ends in “Smith” or “Smyth”
+17. select names of owners who has “av” somewhere in their name (“david” and “dave” should both match)
