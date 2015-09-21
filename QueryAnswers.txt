@@ -1,6 +1,19 @@
-1. SELECT petname, MAX(Price)  FROM petname;
-2. SELECT petname, Price FROM petname ORDER BY Price DESC LIMIT 3;
-3. SELECT petname, Price FROM petname ORDER BY Price limit 3;
-4. SELECT DISTINCT petname FROM petname;
+1. SELECT name, price  FROM pet ORDER BY price DESC LIMIT 1;
+2. SELECT name, price FROM pet ORDER BY price DESC LIMIT 3;
+3. SELECT name, Price FROM pet ORDER BY price limit 3;
+4. SELECT DISTINCT name FROM pet;
+5. SELECT DISTINCT name FROM pet;
+6. SELECT name, price FROM pet WHERE owner_ID is NULL;
+7. SELECT name, price FROM pet WHERE owner_ID is NULL AND neutered = true;
+8. SELECT name, price FROM pet WHERE owner_ID is not NULL AND neutered = false;
+9.select count(*), owner.name from owner join pet on pet.owner_id = owner.id group by name;
+10. SELECT SUM(price) FROM pet;
+11.  select distinct name, count(*) from pet group by name;
+12.
+13. SELECT name, price FROM pet WHERE price > 9.99 and price < 19.99 order by price desc;
+14. SELECT pet.name, owner.name from owner join pet on pet.id = owner.id where owner.name = 'John Smith';
+15. SELECT pet.name, owner.name from owner join pet on pet.id = owner.id where owner.name like '%John%';
+16. SELECT pet.name, owner.name from owner join pet on pet.id = owner.id where owner.name l ike '%Smith%' OR  owner.name like '%Smyth%';
+17.SELECT pet.name, owner.name from owner join pet on pet.id = owner.id where owner.name like '%av%';
 
 
