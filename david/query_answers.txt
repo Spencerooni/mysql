@@ -1,0 +1,51 @@
+create queries for
+1. select the name, price of the most expensive pet
+select max(price) as highestprice from pet
+
+2. select the name, price of the 3 most expensive pets (see limit in mysql)
+select name, price from pet order by price desc limit 3
+
+3. select the name, price of the 3 least expensive pets
+select name, price from pet order by price limit 3
+
+4. unique pet names
+select distinct name from pet
+
+5. unique pet names, but ignore different capitalisations (fLuFfY should match fluffy)
+select distinct name from pet
+
+6. retrieve name, price of pets without an owner
+select name, price from pet where owner_id is null
+
+7. select pets who are still for sale (the criteria is that they have no owner and have been neutered)
+select name, price from pet where owner_id is null and neutered = 1
+
+8. selects pets who have an owner and are not neutered
+select * from pet where owner_id is not null and neutered = 0
+
+9. owner name and the number of pets owned by that owner (see “count” function in mysql)
+select owner.name, count(*) from pet join owner on owner.id = pet.owner_id group by owner_id
+
+10. select the total value of all pets
+select sum(price) from pet
+
+11. retrieve the different pet names and how many times that pet name was given
+select name, count(*) from pet group by name
+
+12. names of people who don’t own a pet
+select * from owner where not exists (select * from pet where pet.owner_id = owner.id)
+
+13. pets which cost > 9.99 but < 19.99, displayed by highest amount first
+select * from pet where price > 9.99 and price < 19.99 order by price desc
+ 
+14. select names of pets whose owner name is “John Smith”
+select pet.name from pet inner join owner on owner.id = pet.owner_id where owner.name = 'John Smith'
+
+15. select names of owners whose name begins with “John”
+select name from owner where name like 'John%'
+
+16. select names of owners whose name ends in “Smith” or “Smyth”
+select name from owner where name like '%Smith' or name like '%Smyth'
+
+17. select names of owners who has “av” somewhere in their name (“david” and “dave” should both match)
+select name from owner where name like '%av%'
