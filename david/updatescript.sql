@@ -5,7 +5,7 @@ create table ownpet(ownpet_id int primary key auto_increment, owner_id int, pet_
 
 INSERT INTO ownpet (owner_id, pet_id)
 SELECT pet.owner_id,
- pet.pet_id from pet; 
+ pet_id from pet; 
 
 ALTER TABLE `ownpet` ADD UNIQUE `unique_index`(`pet_id`, `owner_id`);
 
