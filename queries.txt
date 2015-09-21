@@ -1,0 +1,22 @@
+to pet table, add
+- neutered (what type is it gonna be?)
+- value/price (2 decimal places), look at mysql types
+
+create queries for
+1. select the name, price of the most expensive pet
+2. select the name, price of the 3 most expensive pets (see limit in mysql)
+3. select the name, price of the 3 least expensive pets
+4. unique pet names
+5. unique pet names, but ignore different capitalisations (fLuFfY should match fluffy)
+6. retrieve name, price of pets without an owner
+7. select pets who are still for sale (the criteria is that they have no owner and have been neutered)
+8. owner name and the number of pets owned by that owner (see “count” function in mysql)
+9. select the total value of all pets
+10. retrieve the different pet names and how many times that pet name was given
+11. names of people who don’t own a pet
+12. pets which cost > 9.99 but < 19.99, displayed by highest amount first
+13. select names of pets whose owner name is “John Smith”
+14. select names of owners whose name begins with “John”
+15. select names of owners whose name ends in “Smith” or “Smyth”
+16. select names of owners who has “av” somewhere in their name (“david” and “dave” should both match)
+
