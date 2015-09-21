@@ -1,6 +1,6 @@
 
 
-create table pet (id int primary key auto_increment, name varchar(20), sex char(1), birth date, death date, owner_id int, species_id int);
+create table pet (id int primary key auto_increment, name varchar(20), sex char(1), birth date, death date, owner_id int, species_id int, price decimal(8,2), neutered boolean);
 
 create table owner (id int primary key auto_increment, name varchar(20));
 
