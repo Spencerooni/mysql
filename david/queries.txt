@@ -1,1 +1,17 @@
 
+
+
+
+
+
+
+select name from pet where neutered = 0, owner_id is not null ; 
+select count(*), owner.name from owner join pet on pet.owner_id = owner-id group by name ; 
+select sum(price) from pet ;
+ 
+select distinct owner.name from owner left outerjoin pet on pet.owner_id = owner.id where pet.name is null ; 
+select name, price from pet where price > 9.99 and price < 19.99 order by price desc ; 
+select owner.name as ownername, pet.name as petname from owner left outer join pet on owner.id = pet.owner_id where ownername = "John Smith" ; 
+select name from owner where name like 'John%' ; 
+
+
