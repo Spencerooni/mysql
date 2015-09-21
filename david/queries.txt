@@ -1,1 +1,17 @@
+Select name, max(price) from  pet;
+Select name, price from pet order by price desc limit 3;
+Select name, price from pet order by price limit 3;
+select distinct name pet;
 
+Select name, price from pet where owner_id is null;
+Select name from pet where owner_id is null, neautered = 1;
+ 
+
+
+select name, count(*) from pet group by name;
+
+
+
+
+Select name from owner where owner name like %smith or name like %smyth
+select name from owner where ownername like %av%
