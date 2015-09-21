@@ -24,4 +24,4 @@ insert into pet(name, sex, birth, death, owner_id, species_id, neutered, price) 
 ('Chirpy',  null, '1997-12-09', null, 2, 3,'N', 44.87), -- gwen, bird
 ('Whistler',  null, '1997-12-09', null, 2, 3, 'N', 23.78), -- gwen, bird
 ('Slim', 'm', '1996-04-29', null, 3, 4, 'N', 23.78), -- benny, snake
-('Puffball', 'f', '1999-03-30', null, 4, 5, 'N' 23.77); -- diane, hamster
+('Puffball', 'f', '1999-03-30', null, 4, 5, 'N', 23.77); -- diane, hamster
