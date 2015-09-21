@@ -1,6 +1,6 @@
 create queries for
 1. select the name, price of the most expensive pet
-select max(price) as highestprice from pet
+select name, max(price) as maximumcost from pet group by price desc limit 1
 
 2. select the name, price of the 3 most expensive pets (see limit in mysql)
 select name, price from pet order by price desc limit 3
