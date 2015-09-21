@@ -7,6 +7,13 @@ INSERT INTO ownpet (owner_id, pet_id)
 SELECT pet.owner_id,
  pet.pet_id from pet; 
 
+ALTER TABLE ownpet
+   MODIFY owner_id int NOT NULL;
+
+ALTER TABLE ownpet
+   MODIFY pet_id int NOT NULL;
+
+
 alter table pet
 drop owner_id ; 
 

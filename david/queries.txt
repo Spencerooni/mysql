@@ -4,9 +4,9 @@ Select name, price from pet order by price limit 3;
 select distinct name pet;
 
 Select name, price from pet where owner_id is null;
-Select name from pet where owner_id is null, neautered = 1;
+Select name from pet where owner_id is null and neutered = 1;
 select name from pet where neutered = 0, owner_id is not null ; 
-select count(*), owner.name from owner join pet on pet.owner_id = owner-id group by name ; 
+select count(*), owner.name from owner join pet on pet.owner_id = owner_id group by name ; 
 select sum(price) from pet ;
 select name, count(*) from pet group by name; 
 select distinct owner.name from owner left outerjoin pet on pet.owner_id = owner.id where pet.name is null ; 
