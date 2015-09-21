@@ -1,0 +1,51 @@
+create queries for
+1. select the name, price of the most expensive pet
+select name, price from pet order by price desc limit 1;
+
+2. select the name, price of the 3 most expensive pets (see limit in mysql)
+select name, price from pet order by price desc limit 3;
+
+3. select the name, price of the 3 least expensive pets
+select name, price from pet where price is not null order by price limit 3;
+
+4. unique pet names
+select distinct name from pet;
+
+5. unique pet names, but ignore different capitalisations (fLuFfY should match fluffy)
+same as 4
+
+6. retrieve name, price of pets without an owner
+select name, price from pet where owner_id is null;
+
+7. select pets who are still for sale (the criteria is that they have no owner and have been neutered)
+select * from pet where owner is null and neutered = true;
+
+8. selects pets who have an owner and are not neutered
+select name, price from pet where owner_id is not null and neutered = true;
+
+9. owner name and the number of pets owned by that owner (see “count” function in mysql)
+SELECT o.name, COUNT(p.owner_id) AS numberOfPets FROM owner as o LEFT JOIN pet as p ON p.owner_id = o.id GROUP BY o.id;
+
+10. select the total value of all pets
+select sum(pet.price) from pet;
+
+11. retrieve the different pet names and how many times that pet name was given
+select pet.name, count(*) as numberOfPetsWithThisName from pet group by pet.name;
+
+12. names of people who don’t own a pet
+select owner.name from owner where owner.id not in (select pet.owner_id from pet where pet.owner_id is not null);
+
+13. pets which cost > 9.99 but < 19.99, displayed by highest amount first
+select * from pet where pet.price > 9.99 and pet.price < 19.99 order by price desc;
+
+14. select names of pets whose owner name is “John Smith”
+select pet.name from pet join owner on owner.id = pet.owner_id where owner.name = 'Harold';
+
+15. select names of owners whose name begins with “John”
+select pet.name from pet join owner on owner.id = pet.owner_id where owner.name like 'Ha%';
+
+16. select names of owners whose name ends in “Smith” or “Smyth”
+select pet.name from pet join owner on owner.id = pet.owner_id where owner.name like '%Smith' or owner.name like '%Smyth';
+
+17. select names of owners who has “av” somewhere in their name (“david” and “dave” should both match)
+select pet.name from pet join owner on owner.id = pet.owner_id where owner.name like '%av%';
