@@ -15,5 +15,20 @@
 15. SELECT pet.name, owner.name from owner join pet on pet.id = owner.id where owner.name like '%John%';
 16. SELECT pet.name, owner.name from owner join pet on pet.id = owner.id where owner.name l ike '%Smith%' OR  owner.name like '%Smyth%';
 17.SELECT pet.name, owner.name from owner join pet on pet.id = owner.id where owner.name like '%av%';
+18. select name, price from pet left join pet_owner on pet_id = pet.id where pet_id is null ;
+19. select name, price from pet left join pet_owner on pet_id = pet.id where pet_id is null and neutered = true ;
+20. select name, price from pet left join pet_owner on pet_id = pet.id where pet_id is not null and neutered = false ;
+21.Select owner.name, COUNT(name) as NoOfPets from owner join pet_owner on owner.id = pet_owner.owner_id group by name;
+22. select name from owner left join pet_owner on owner_id = owner.id where owner_id is null ;
+23. select pet.name from pet join pet_owner on pet.id = pet_owner.pet_id join owner on owner.id = pet_owner.owner_id where owner.name not like '%av%'; 
+24.select pet.name as PetName, owner.name as OwnerName from pet_owner left outer join pet on pet_owner.pet_id = pet.id right outer join owner  on pet_owner.owner_id = owner.id  
+25.DELIMITER //
+CREATE PROCEDURE HowManyPets(IN ownername VARCHAR(255))
+ BEGIN
+Select pet.name, owner.name from pet_owner join pet on pet_owner.pet_id = pet.id join owner on pet_owner.owner_id = owner.id where owner.name = ownername;
+
+ END //
+DELIMITER ;
+
 
 
