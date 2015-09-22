@@ -20,3 +20,16 @@ create queries for
 15. select names of owners whose name begins with “John”
 16. select names of owners whose name ends in “Smith” or “Smyth”
 17. select names of owners who has “av” somewhere in their name (“david” and “dave” should both match)
+
+with many to many (pet multiple owners)
+18. retrieve name, price of pets without an owner
+
+19. select pets who are still for sale (the criteria is that they have no owner and have been neutered)
+
+20. selects pets who have an owner and are not neutered
+
+21. owner name and the number of pets owned by that owner (see “count” function in mysql)
+
+22. names of people who don’t own a pet
+
+23. select names of pets whose owner name does not have “av” in their name
