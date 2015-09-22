@@ -33,3 +33,7 @@ with many to many (pet multiple owners)
 22. names of people who don’t own a pet
 
 23. select names of pets whose owner name does not have “av” in their name
+
+24. combination of all pet names / owner names
+
+25. return number of pets owned by <owner name> (stored procedure)
