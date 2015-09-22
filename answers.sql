@@ -10,7 +10,8 @@ Select owner.name, COUNT(name) as NumberOfPets from owner join pet_owner on owne
 Select owner.name from owner where owner.ID NOT IN (Select owner_ID from pet_owner);
 --23
 Select pet.name, owner.ID, pet_owner.owner_ID, pet_owner.pet_ID, pet.ID from pet_owner join pet on pet_owner.pet_ID = pet.ID join owner on pet_owner.owner_ID = owner.ID where owner.name not like '%av%';
-
+--24
+Select pet.name, owner.name, owner.ID, pet_owner.owner_ID, pet_owner.pet_ID, pet.ID from pet_owner right outer join pet on pet_owner.pet_ID = pet.ID left outer join owner on pet_owner.owner_ID = owner.ID;
 
 
 
